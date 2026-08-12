@@ -26,7 +26,6 @@ Hi, I'm **Arpit Rana**, a Computer Science Engineering student pursuing **B.Tech
 ![](https://github-readme-stats.shion.dev/api/top-langs/?username=arpitrana35773553-alt&theme=algolia&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
 ---
-[![](https://komarev.com/ghpvc/?username=arpitrana35773553-alt&icon=0&color=6)](https://visitcount.itsvg.in)
+![Profile Views](https://komarev.com/ghpvc/?username=arpitrana35773553-alt&color=00bfff&style=flat)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 > Building today. Securing tomorrow.
