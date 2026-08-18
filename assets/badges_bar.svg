@@ -11,9 +11,9 @@
       }
       .val-cond {
         font-family: 'Barlow Condensed', 'Arial Narrow', -apple-system-condensed, sans-serif-condensed, sans-serif;
-        font-size: 14.5px;
+        font-size: 16px;
         font-weight: 800;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.8px;
         text-transform: uppercase;
       }
     </style>
@@ -125,6 +125,6 @@
     </circle>
 
     <text x="60" y="32" class="lbl-cond" fill="#f472b6">FOCUS AREA</text>
-    <text x="60" y="52" class="val-cond" fill="#f0f9ff">AI &amp; CYBERSECURITY</text>
+    <text x="60" y="52" class="val-cond" fill="#f0f9ff">AI X CYBER</text>
   </g>
 </svg>
