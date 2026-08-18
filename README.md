@@ -1,41 +1,41 @@
 <div align="center">
-  <img src="./assets/header.svg" width="100%" alt="Arpit Rana - Hero Banner" />
+  <img src="https://raw.githubusercontent.com/arpitrana35773553-alt/arpitrana35773553-alt/main/assets/header.svg?v=2" width="100%" alt="Arpit Rana - Hero Banner" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="./assets/badges_bar.svg" width="100%" alt="Location · Education · University · Focus" />
+  <img src="https://raw.githubusercontent.com/arpitrana35773553-alt/arpitrana35773553-alt/main/assets/badges_bar.svg?v=2" width="100%" alt="Location · Education · University · Focus" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="./assets/about_me.svg" width="100%" alt="About Me - Arpit Rana" />
+  <img src="https://raw.githubusercontent.com/arpitrana35773553-alt/arpitrana35773553-alt/main/assets/about_me.svg?v=2" width="100%" alt="About Me - Arpit Rana" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="./assets/tech_stack.svg" width="100%" alt="Tech Stack & Skills" />
+  <img src="https://raw.githubusercontent.com/arpitrana35773553-alt/arpitrana35773553-alt/main/assets/tech_stack.svg?v=2" width="100%" alt="Tech Stack & Skills" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="./assets/socials.svg" width="100%" alt="Social Links & Networks" />
+  <img src="https://raw.githubusercontent.com/arpitrana35773553-alt/arpitrana35773553-alt/main/assets/socials.svg?v=2" width="100%" alt="Social Links & Networks" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="./assets/github_stats.svg" width="100%" alt="GitHub Metrics & Language Distribution" />
+  <img src="https://raw.githubusercontent.com/arpitrana35773553-alt/arpitrana35773553-alt/main/assets/github_stats.svg?v=2" width="100%" alt="GitHub Metrics & Language Distribution" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="./assets/footer.svg" width="100%" alt="Footer Sign-off" />
+  <img src="https://raw.githubusercontent.com/arpitrana35773553-alt/arpitrana35773553-alt/main/assets/footer.svg?v=2" width="100%" alt="Footer Sign-off" />
 </div>
 
 <br/>
