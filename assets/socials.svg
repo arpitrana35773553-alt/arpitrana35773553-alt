@@ -1,50 +1,143 @@
-<svg width="850" height="118" viewBox="0 0 850 118" xmlns="http://www.w3.org/2000/svg">
-  <!-- Header line -->
-  <line x1="28" y1="18" x2="50" y2="18" stroke="#38bdf8" stroke-width="1" stroke-opacity=".6"/>
-  <text x="56" y="23" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="1.2">🌐  SOCIALS &amp; CONNECT</text>
-  <line x1="230" y1="18" x2="822" y2="18" stroke="#ffffff" stroke-opacity=".05" stroke-width="1"/>
+<svg width="850" height="120" viewBox="0 0 850 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .sec-title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+      .tag-title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .soc-name {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      .soc-handle {
+        font-family: 'Fira Code', 'Courier New', monospace;
+        font-size: 11px;
+        letter-spacing: 0.3px;
+      }
+    </style>
 
-  <!-- Discord -->
-  <g opacity="0"><animate attributeName="opacity" values="0;1" dur=".5s" begin=".05s" fill="freeze"/>
-    <rect x="10" y="30" width="196" height="78" rx="14" fill="#080e1e" stroke="#5865F2" stroke-opacity=".32"/>
-    <rect x="10" y="30" width="4" height="78" rx="3" fill="#5865F2"/>
-    <rect x="22" y="44" width="40" height="40" rx="10" fill="#5865F2" fill-opacity=".15"/>
-    <text x="42" y="70" font-size="20" text-anchor="middle">💬</text>
-    <text x="72" y="62" font-family="'Segoe UI',system-ui,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Discord</text>
-    <text x="72" y="80" font-family="monospace" font-size="11" fill="#475569">@arpitrana</text>
-    <text x="194" y="74" font-family="'Segoe UI',system-ui,sans-serif" font-size="15" fill="#30363d" text-anchor="end">→</text>
+    <filter id="soc-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <linearGradient id="sc-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5865F2" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#080e1e" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="sc-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d9bf0" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#080e1e" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="sc-3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a66c2" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#080e1e" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="sc-4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8562d" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#080e1e" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Header with Plenty of Spacing -->
+  <g transform="translate(10, 14)">
+    <text x="0" y="15" class="sec-title" fill="#ffffff">🌐 SOCIALS &amp; CONNECTIVITY</text>
+    
+    <!-- Chip placed with safe gap at x=280 -->
+    <rect x="270" y="0" width="135" height="20" rx="6" fill="#38bdf8" fill-opacity="0.12" stroke="#38bdf8" stroke-opacity="0.4"/>
+    <text x="337" y="14" class="tag-title" fill="#38bdf8" text-anchor="middle">CONNECT &amp; NETWORK</text>
+
+    <line x1="420" y1="10" x2="830" y2="10" stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1"/>
   </g>
 
-  <!-- Twitter / X -->
-  <g opacity="0"><animate attributeName="opacity" values="0;1" dur=".5s" begin=".12s" fill="freeze"/>
-    <rect x="216" y="30" width="196" height="78" rx="14" fill="#080e1e" stroke="#1d9bf0" stroke-opacity=".32"/>
-    <rect x="216" y="30" width="4" height="78" rx="3" fill="#1d9bf0"/>
-    <rect x="228" y="44" width="40" height="40" rx="10" fill="#1d9bf0" fill-opacity=".15"/>
-    <text x="248" y="69" font-family="'Segoe UI',system-ui,sans-serif" font-size="17" font-weight="900" fill="#1d9bf0" text-anchor="middle">𝕏</text>
-    <text x="278" y="62" font-family="'Segoe UI',system-ui,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">X / Twitter</text>
-    <text x="278" y="80" font-family="monospace" font-size="11" fill="#475569">@arpitrana</text>
-    <text x="400" y="74" font-family="'Segoe UI',system-ui,sans-serif" font-size="15" fill="#30363d" text-anchor="end">→</text>
+  <!-- ================= SOCIAL 1: DISCORD ================= -->
+  <g transform="translate(10, 44)">
+    <animateTransform attributeName="transform" type="translate" values="10,44; 10,38; 10,44" dur="3.6s" repeatCount="indefinite"/>
+    <rect width="198" height="66" rx="12" fill="url(#sc-1)" stroke="#5865F2" stroke-opacity="0.4" stroke-width="1.2"/>
+    <rect width="4" height="66" rx="2" fill="#5865F2" filter="url(#soc-glow)"/>
+    
+    <rect x="14" y="14" width="38" height="38" rx="10" fill="#5865F2" fill-opacity="0.15" stroke="#5865F2" stroke-opacity="0.3"/>
+    <text x="33" y="39" font-size="20" text-anchor="middle">💬</text>
+
+    <circle cx="180" cy="16" r="3" fill="#5865F2">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+
+    <text x="62" y="30" class="soc-name" fill="#ffffff">Discord</text>
+    <text x="62" y="47" class="soc-handle" fill="#94a3b8">@arpitrana</text>
+    
+    <text x="180" y="48" font-family="monospace" font-size="12" fill="#5865F2">❯</text>
   </g>
 
-  <!-- LinkedIn -->
-  <g opacity="0"><animate attributeName="opacity" values="0;1" dur=".5s" begin=".19s" fill="freeze"/>
-    <rect x="422" y="30" width="196" height="78" rx="14" fill="#080e1e" stroke="#0a66c2" stroke-opacity=".32"/>
-    <rect x="422" y="30" width="4" height="78" rx="3" fill="#0a66c2"/>
-    <rect x="434" y="44" width="40" height="40" rx="10" fill="#0a66c2" fill-opacity=".15"/>
-    <text x="454" y="68" font-family="'Segoe UI',system-ui,sans-serif" font-size="15" font-weight="800" fill="#0a66c2" text-anchor="middle">in</text>
-    <text x="484" y="62" font-family="'Segoe UI',system-ui,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">LinkedIn</text>
-    <text x="484" y="80" font-family="monospace" font-size="11" fill="#475569">Arpit Rana</text>
-    <text x="606" y="74" font-family="'Segoe UI',system-ui,sans-serif" font-size="15" fill="#30363d" text-anchor="end">→</text>
+  <!-- ================= SOCIAL 2: X / TWITTER ================= -->
+  <g transform="translate(220, 44)">
+    <animateTransform attributeName="transform" type="translate" values="220,44; 220,38; 220,44" dur="4.0s" begin="0.3s" repeatCount="indefinite"/>
+    <rect width="198" height="66" rx="12" fill="url(#sc-2)" stroke="#1d9bf0" stroke-opacity="0.4" stroke-width="1.2"/>
+    <rect width="4" height="66" rx="2" fill="#1d9bf0" filter="url(#soc-glow)"/>
+    
+    <rect x="14" y="14" width="38" height="38" rx="10" fill="#1d9bf0" fill-opacity="0.15" stroke="#1d9bf0" stroke-opacity="0.3"/>
+    <text x="33" y="39" font-size="18" font-weight="800" fill="#1d9bf0" text-anchor="middle">𝕏</text>
+
+    <circle cx="180" cy="16" r="3" fill="#1d9bf0">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.7s" repeatCount="indefinite"/>
+    </circle>
+
+    <text x="62" y="30" class="soc-name" fill="#ffffff">X / Twitter</text>
+    <text x="62" y="47" class="soc-handle" fill="#94a3b8">@arpitrana</text>
+    
+    <text x="180" y="48" font-family="monospace" font-size="12" fill="#1d9bf0">❯</text>
   </g>
 
-  <!-- Dev.to -->
-  <g opacity="0"><animate attributeName="opacity" values="0;1" dur=".5s" begin=".26s" fill="freeze"/>
-    <rect x="628" y="30" width="212" height="78" rx="14" fill="#080e1e" stroke="#e8562d" stroke-opacity=".32"/>
-    <rect x="628" y="30" width="4" height="78" rx="3" fill="#e8562d"/>
-    <rect x="640" y="44" width="40" height="40" rx="10" fill="#e8562d" fill-opacity=".15"/>
-    <text x="660" y="70" font-size="20" text-anchor="middle">📝</text>
-    <text x="690" y="62" font-family="'Segoe UI',system-ui,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Dev.to</text>
-    <text x="690" y="80" font-family="monospace" font-size="11" fill="#475569">@arpitrana</text>
-    <text x="828" y="74" font-family="'Segoe UI',system-ui,sans-serif" font-size="15" fill="#30363d" text-anchor="end">→</text>
+  <!-- ================= SOCIAL 3: LINKEDIN ================= -->
+  <g transform="translate(430, 44)">
+    <animateTransform attributeName="transform" type="translate" values="430,44; 430,38; 430,44" dur="4.4s" begin="0.6s" repeatCount="indefinite"/>
+    <rect width="198" height="66" rx="12" fill="url(#sc-3)" stroke="#0a66c2" stroke-opacity="0.4" stroke-width="1.2"/>
+    <rect width="4" height="66" rx="2" fill="#0a66c2" filter="url(#soc-glow)"/>
+    
+    <rect x="14" y="14" width="38" height="38" rx="10" fill="#0a66c2" fill-opacity="0.15" stroke="#0a66c2" stroke-opacity="0.3"/>
+    <text x="33" y="38" font-size="16" font-weight="800" fill="#0a66c2" text-anchor="middle">in</text>
+
+    <circle cx="180" cy="16" r="3" fill="#0a66c2">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.9s" repeatCount="indefinite"/>
+    </circle>
+
+    <text x="62" y="30" class="soc-name" fill="#ffffff">LinkedIn</text>
+    <text x="62" y="47" class="soc-handle" fill="#94a3b8">Arpit Rana</text>
+    
+    <text x="180" y="48" font-family="monospace" font-size="12" fill="#0a66c2">❯</text>
+  </g>
+
+  <!-- ================= SOCIAL 4: DEV.TO ================= -->
+  <g transform="translate(640, 44)">
+    <animateTransform attributeName="transform" type="translate" values="640,44; 640,38; 640,42" dur="4.8s" begin="0.9s" repeatCount="indefinite"/>
+    <rect width="200" height="66" rx="12" fill="url(#sc-4)" stroke="#e8562d" stroke-opacity="0.4" stroke-width="1.2"/>
+    <rect width="4" height="66" rx="2" fill="#e8562d" filter="url(#soc-glow)"/>
+    
+    <rect x="14" y="14" width="38" height="38" rx="10" fill="#e8562d" fill-opacity="0.15" stroke="#e8562d" stroke-opacity="0.3"/>
+    <text x="33" y="39" font-size="19" text-anchor="middle">📝</text>
+
+    <circle cx="182" cy="16" r="3" fill="#e8562d">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" repeatCount="indefinite"/>
+    </circle>
+
+    <text x="62" y="30" class="soc-name" fill="#ffffff">Dev.to Blog</text>
+    <text x="62" y="47" class="soc-handle" fill="#94a3b8">@arpitrana</text>
+    
+    <text x="180" y="48" font-family="monospace" font-size="12" fill="#e8562d">❯</text>
   </g>
 </svg>

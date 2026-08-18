@@ -1,114 +1,248 @@
-<svg width="850" height="200" viewBox="0 0 850 200" xmlns="http://www.w3.org/2000/svg">
+<svg width="850" height="210" viewBox="0 0 850 210" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#090d16"/>
-      <stop offset="50%" stop-color="#0d1527"/>
-      <stop offset="100%" stop-color="#150f28"/>
+    <style>
+      .hdr-title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+        font-size: 42px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      .hdr-tag {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .hdr-role {
+        font-family: 'Fira Code', 'Courier New', monospace;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .hdr-chip {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+    </style>
+
+    <linearGradient id="h-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811"/>
+      <stop offset="50%" stop-color="#090f21"/>
+      <stop offset="100%" stop-color="#120b24"/>
     </linearGradient>
-    <linearGradient id="nameG" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ffffff">
-        <animate attributeName="stop-color" values="#fff;#38bdf8;#a855f7;#fff" dur="5s" repeatCount="indefinite"/>
+
+    <linearGradient id="neon-name" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe">
+        <animate attributeName="stop-color" values="#00f2fe;#38bdf8;#9d4edd;#f72585;#00f2fe" dur="6s" repeatCount="indefinite"/>
       </stop>
       <stop offset="50%" stop-color="#38bdf8">
-        <animate attributeName="stop-color" values="#38bdf8;#a855f7;#fff;#38bdf8" dur="5s" repeatCount="indefinite"/>
+        <animate attributeName="stop-color" values="#38bdf8;#9d4edd;#f72585;#00f2fe;#38bdf8" dur="6s" repeatCount="indefinite"/>
       </stop>
       <stop offset="100%" stop-color="#a855f7">
-        <animate attributeName="stop-color" values="#a855f7;#fff;#38bdf8;#a855f7" dur="5s" repeatCount="indefinite"/>
+        <animate attributeName="stop-color" values="#a855f7;#f72585;#00f2fe;#38bdf8;#a855f7" dur="6s" repeatCount="indefinite"/>
       </stop>
     </linearGradient>
-    <radialGradient id="b1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity=".4"/>
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="b2" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#a855f7" stop-opacity=".32"/>
-      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="6" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="1" cy="1" r="1" fill="#ffffff" fill-opacity=".04"/>
-    </pattern>
-    <linearGradient id="topLine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="50%" stop-color="#a855f7"/>
-      <stop offset="100%" stop-color="#ec4899"/>
+
+    <linearGradient id="laser-beam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00f2fe" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#f72585" stop-opacity="0"/>
     </linearGradient>
-    <clipPath id="topClip"><rect width="850" height="3" rx="0"/></clipPath>
+
+    <filter id="glow-heavy" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="h-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.06"/>
+      <circle cx="24" cy="24" r="0.75" fill="#38bdf8" fill-opacity="0.12"/>
+    </pattern>
+
+    <clipPath id="h-clip">
+      <rect width="850" height="210" rx="16"/>
+    </clipPath>
   </defs>
 
-  <!-- BG -->
-  <rect width="850" height="200" rx="20" fill="url(#bg)"/>
-  <rect width="850" height="200" rx="20" fill="url(#dots)"/>
+  <g clip-path="url(#h-clip)">
+    <!-- Base Background -->
+    <rect width="850" height="210" fill="url(#h-bg)"/>
+    <rect width="850" height="210" fill="url(#h-grid)"/>
 
-  <!-- Ambient blobs -->
-  <ellipse cx="-20" cy="-20" rx="160" ry="160" fill="url(#b1)">
-    <animate attributeName="opacity" values=".3;.8;.3" dur="6s" repeatCount="indefinite"/>
-  </ellipse>
-  <ellipse cx="900" cy="220" rx="190" ry="190" fill="url(#b2)">
-    <animate attributeName="opacity" values=".4;.9;.4" dur="7s" repeatCount="indefinite"/>
-  </ellipse>
+    <!-- Ambient Blobs -->
+    <circle cx="90" cy="50" r="110" fill="#00f2fe" fill-opacity="0.12" filter="url(#glow-heavy)">
+      <animate attributeName="cx" values="90;130;90" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="fill-opacity" values="0.08;0.16;0.08" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="760" cy="160" r="130" fill="#f72585" fill-opacity="0.1" filter="url(#glow-heavy)">
+      <animate attributeName="cx" values="760;720;760" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="fill-opacity" values="0.07;0.15;0.07" dur="5s" repeatCount="indefinite"/>
+    </circle>
 
-  <!-- Border -->
-  <rect width="850" height="200" rx="20" fill="none" stroke="#6366f1" stroke-opacity=".35" stroke-width="1"/>
-
-  <!-- Animated top gradient line -->
-  <g clip-path="url(#topClip)">
-    <rect width="1700" height="3" fill="url(#topLine)">
-      <animateTransform attributeName="transform" type="translate" values="0,0;-850,0;0,0" dur="5s" repeatCount="indefinite"/>
+    <!-- Scanning Laser -->
+    <rect x="-300" y="0" width="300" height="210" fill="url(#laser-beam)" opacity="0.12">
+      <animate attributeName="x" values="-300;850;-300" dur="7s" repeatCount="indefinite"/>
     </rect>
+
+    <!-- Top Running Border -->
+    <rect x="-850" y="0" width="1700" height="2.5" fill="url(#neon-name)">
+      <animate attributeName="x" values="-850;0;-850" dur="5s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- HUD Frame Corners -->
+    <path d="M 12 28 L 12 12 L 28 12" fill="none" stroke="#00f2fe" stroke-width="2" opacity="0.8"/>
+    <path d="M 838 28 L 838 12 L 822 12" fill="none" stroke="#00f2fe" stroke-width="2" opacity="0.8"/>
+    <path d="M 12 182 L 12 198 L 28 198" fill="none" stroke="#f72585" stroke-width="2" opacity="0.8"/>
+    <path d="M 838 182 L 838 198 L 822 198" fill="none" stroke="#f72585" stroke-width="2" opacity="0.8"/>
+
+    <!-- Outer Border -->
+    <rect width="850" height="210" rx="16" fill="none" stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1.2"/>
+
+    <!-- ================= LEFT CONTENT ================= -->
+    <!-- Greeting Pill -->
+    <g transform="translate(32, 22)">
+      <rect width="160" height="24" rx="12" fill="#00f2fe" fill-opacity="0.1" stroke="#00f2fe" stroke-opacity="0.5" stroke-width="1"/>
+      <circle cx="14" cy="12" r="3.5" fill="#00f2fe" filter="url(#glow-subtle)">
+        <animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="26" y="16" class="hdr-tag" fill="#00f2fe">👋 HELLO WORLD</text>
+    </g>
+
+    <!-- TITLE: ARPIT RANA -->
+    <g transform="translate(32, 86)">
+      <text x="0" y="0" class="hdr-title" fill="url(#neon-name)" filter="url(#glow-heavy)" opacity="0.6">ARPIT RANA</text>
+      <text x="0" y="0" class="hdr-title" fill="url(#neon-name)">ARPIT RANA</text>
+    </g>
+
+    <!-- Terminal Subtitle / Role Box -->
+    <g transform="translate(32, 118)">
+      <rect x="0" y="-16" width="460" height="32" rx="8" fill="#070e22" fill-opacity="0.85" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1"/>
+      <text x="12" y="5" class="hdr-role" fill="#00f2fe">❯</text>
+      
+      <!-- Role Cycle -->
+      <g>
+        <text x="32" y="4" class="hdr-role" fill="#f1f5f9">
+          AI &amp; Cybersecurity Enthusiast
+          <animate attributeName="opacity" values="1;1;0;0;0;0;1" keyTimes="0;0.30;0.33;0.66;0.70;0.97;1" dur="9s" repeatCount="indefinite"/>
+        </text>
+        <text x="32" y="4" class="hdr-role" fill="#38bdf8" opacity="0">
+          B.Tech CSE Core Undergrad @ LPU
+          <animate attributeName="opacity" values="0;0;1;1;0;0;0" keyTimes="0;0.30;0.34;0.63;0.67;0.97;1" dur="9s" repeatCount="indefinite"/>
+        </text>
+        <text x="32" y="4" class="hdr-role" fill="#ec4899" opacity="0">
+          Builder • Explorer • Problem Solver
+          <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;0.63;0.67;0.70;0.94;0.98;1" dur="9s" repeatCount="indefinite"/>
+        </text>
+      </g>
+
+      <!-- Cursor -->
+      <rect x="435" y="-8" width="7" height="16" rx="2" fill="#00f2fe" filter="url(#glow-subtle)">
+        <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Mini Spec Chips -->
+    <g transform="translate(32, 168)">
+      <rect x="0" y="0" width="95" height="22" rx="6" fill="#00f2fe" fill-opacity="0.1" stroke="#00f2fe" stroke-opacity="0.35"/>
+      <text x="47" y="15" class="hdr-chip" fill="#7dd3fc" text-anchor="middle">⚡ AI / ML</text>
+
+      <rect x="105" y="0" width="105" height="22" rx="6" fill="#9d4edd" fill-opacity="0.1" stroke="#9d4edd" stroke-opacity="0.35"/>
+      <text x="157" y="15" class="hdr-chip" fill="#c4b5fd" text-anchor="middle">🔒 CYBERSEC</text>
+
+      <rect x="220" y="0" width="110" height="22" rx="6" fill="#f72585" fill-opacity="0.1" stroke="#f72585" stroke-opacity="0.35"/>
+      <text x="275" y="15" class="hdr-chip" fill="#f472b6" text-anchor="middle">🚀 FULLSTACK</text>
+
+      <rect x="340" y="0" width="95" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.15"/>
+      <text x="387" y="15" class="hdr-chip" fill="#94a3b8" text-anchor="middle">🎓 LPU CSE</text>
+    </g>
+
+    <!-- ================= RIGHT PANEL ================= -->
+    <!-- Collab Status Pill -->
+    <g transform="translate(560, 22)">
+      <rect width="255" height="30" rx="10" fill="#070e22" fill-opacity="0.9" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.2"/>
+      <circle cx="18" cy="15" r="4" fill="#10b981" filter="url(#glow-subtle)">
+        <animate attributeName="r" values="3.5;5.5;3.5" dur="1.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="1.6s" repeatCount="indefinite"/>
+      </circle>
+      <text x="32" y="19" class="hdr-tag" fill="#34d399">OPEN FOR COLLABORATION</text>
+    </g>
+
+    <!-- Radar Sphere -->
+    <g transform="translate(740, 115)">
+      <circle cx="0" cy="0" r="40" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="5, 4" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="12s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="30" fill="none" stroke="#f72585" stroke-width="1.2" stroke-dasharray="6, 5" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="18" fill="#090f26" stroke="#00f2fe" stroke-width="1.5"/>
+      <text x="0" y="6" font-size="18" text-anchor="middle">⚡</text>
+      <line x1="0" y1="0" x2="32" y2="-18" stroke="#00f2fe" stroke-width="1.8" opacity="0.85">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="3s" repeatCount="indefinite"/>
+      </line>
+    </g>
+
+    <!-- Audio Equalizer Spectrum -->
+    <g transform="translate(560, 150)">
+      <text x="0" y="-10" class="hdr-tag" font-size="9.5" fill="#64748b">ACTIVITY SPECTRUM</text>
+      
+      <!-- 10 Bars -->
+      <rect x="0" y="0" width="5" height="20" rx="2.5" fill="#00f2fe">
+        <animate attributeName="height" values="8;30;12;34;8" dur="1.2s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="26;4;22;0;26" dur="1.2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="9" y="0" width="5" height="24" rx="2.5" fill="#00f2fe">
+        <animate attributeName="height" values="20;6;32;10;20" dur="1.4s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="14;28;2;24;14" dur="1.4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="18" y="0" width="5" height="15" rx="2.5" fill="#38bdf8">
+        <animate attributeName="height" values="32;14;36;18;32" dur="1.1s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="2;20;-2;16;2" dur="1.1s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="27" y="0" width="5" height="22" rx="2.5" fill="#38bdf8">
+        <animate attributeName="height" values="10;34;6;30;10" dur="1.5s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="24;0;28;4;24" dur="1.5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="36" y="0" width="5" height="28" rx="2.5" fill="#818cf8">
+        <animate attributeName="height" values="26;10;34;14;26" dur="1.3s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="8;24;0;20;8" dur="1.3s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="45" y="0" width="5" height="12" rx="2.5" fill="#9d4edd">
+        <animate attributeName="height" values="14;32;8;30;14" dur="1.6s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="20;2;26;4;20" dur="1.6s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="54" y="0" width="5" height="24" rx="2.5" fill="#9d4edd">
+        <animate attributeName="height" values="30;8;36;12;30" dur="1.0s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="4;26;-2;22;4" dur="1.0s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="63" y="0" width="5" height="16" rx="2.5" fill="#f72585">
+        <animate attributeName="height" values="8;30;14;34;8" dur="1.35s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="26;4;20;0;26" dur="1.35s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="72" y="0" width="5" height="26" rx="2.5" fill="#f72585">
+        <animate attributeName="height" values="30;12;26;6;30" dur="1.15s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="4;22;8;28;4" dur="1.15s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="81" y="0" width="5" height="18" rx="2.5" fill="#00f2fe">
+        <animate attributeName="height" values="14;32;10;28;14" dur="1.25s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="20;2;24;6;20" dur="1.25s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
   </g>
-
-  <!-- Hello World badge -->
-  <rect x="28" y="22" width="148" height="26" rx="13" fill="#38bdf8" fill-opacity=".12" stroke="#38bdf8" stroke-opacity=".45" stroke-width="1"/>
-  <text x="42" y="39" font-family="'Segoe UI',system-ui,sans-serif" font-size="12" font-weight="700" fill="#38bdf8" letter-spacing=".5">👋  HELLO WORLD!</text>
-
-  <!-- Name -->
-  <text x="28" y="96" font-family="'Segoe UI',system-ui,sans-serif" font-size="40" font-weight="800" fill="url(#nameG)">Arpit Rana</text>
-
-  <!-- Prompt symbol -->
-  <text x="28" y="130" font-family="monospace" font-size="14" font-weight="700" fill="#38bdf8">❯</text>
-
-  <!-- Cycling role text -->
-  <text x="48" y="130" font-family="monospace" font-size="14" fill="#e2e8f0" font-weight="500">
-    AI &amp; Cybersecurity Enthusiast
-    <animate attributeName="opacity" values="1;1;0;0;0;0;1" keyTimes="0;.30;.33;.34;.63;.97;1" dur="9s" repeatCount="indefinite"/>
-  </text>
-  <text x="48" y="130" font-family="monospace" font-size="14" fill="#e2e8f0" font-weight="500" opacity="0">
-    B.Tech CSE Core Student @ LPU
-    <animate attributeName="opacity" values="0;0;0;1;1;0;0" keyTimes="0;.30;.34;.37;.63;.66;1" dur="9s" repeatCount="indefinite"/>
-  </text>
-  <text x="48" y="130" font-family="monospace" font-size="14" fill="#e2e8f0" font-weight="500" opacity="0">
-    Builder · Explorer · Problem Solver
-    <animate attributeName="opacity" values="0;0;0;0;0;1;0" keyTimes="0;.30;.34;.63;.67;.70;1" dur="9s" repeatCount="indefinite"/>
-  </text>
-
-  <!-- Cursor blink -->
-  <rect x="352" y="116" width="7" height="16" rx="2" fill="#38bdf8" filter="url(#glow)">
-    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
-  </rect>
-
-  <!-- RIGHT: Available pill -->
-  <rect x="556" y="42" width="268" height="30" rx="15" fill="#10b981" fill-opacity=".1" stroke="#10b981" stroke-opacity=".4" stroke-width="1"/>
-  <circle cx="574" cy="57" r="5" fill="#10b981" filter="url(#glow)">
-    <animate attributeName="r" values="4;6;4" dur="1.8s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values=".6;1;.6" dur="1.8s" repeatCount="indefinite"/>
-  </circle>
-  <text x="585" y="62" font-family="'Segoe UI',system-ui,sans-serif" font-size="12" font-weight="600" fill="#34d399">Available for Collaborations</text>
-
-  <!-- Cyber badge -->
-  <rect x="556" y="83" width="268" height="28" rx="12" fill="#6366f1" fill-opacity=".12" stroke="#6366f1" stroke-opacity=".35" stroke-width="1"/>
-  <text x="690" y="101" font-family="monospace" font-size="12" fill="#c7d2fe" text-anchor="middle">🛡️ SecOps  //  🤖 Neural Core</text>
-
-  <!-- Chip row -->
-  <rect x="556" y="122" width="76" height="24" rx="9" fill="#38bdf8" fill-opacity=".08" stroke="#38bdf8" stroke-opacity=".32" stroke-width="1"/>
-  <text x="594" y="138" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="middle">⚡ AI/ML</text>
-
-  <rect x="640" y="122" width="82" height="24" rx="9" fill="#a855f7" fill-opacity=".08" stroke="#a855f7" stroke-opacity=".32" stroke-width="1"/>
-  <text x="681" y="138" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" font-weight="600" fill="#c084fc" text-anchor="middle">🔒 CyberSec</text>
-
-  <rect x="730" y="122" width="94" height="24" rx="9" fill="#ffffff" fill-opacity=".04" stroke="#ffffff" stroke-opacity=".1" stroke-width="1"/>
-  <text x="777" y="138" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" font-weight="500" fill="#94a3b8" text-anchor="middle">🎓 LPU CSE</text>
 </svg>

@@ -1,7 +1,27 @@
 <svg width="850" height="90" viewBox="0 0 850 90" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <style>
+      .quote-txt {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      .quote-sub {
+        font-family: 'Fira Code', 'Courier New', monospace;
+        font-size: 11px;
+      }
+      .pill-txt {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+      }
+    </style>
+
     <linearGradient id="ftl" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#38bdf8"/><stop offset="50%" stop-color="#a855f7"/><stop offset="100%" stop-color="#ec4899"/>
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
     </linearGradient>
     <linearGradient id="fring" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#38bdf8">
@@ -15,10 +35,10 @@
   </defs>
 
   <!-- BG -->
-  <rect width="850" height="90" rx="20" fill="#06091a"/>
-  <rect width="850" height="90" rx="20" fill="none" stroke="#6366f1" stroke-opacity=".22" stroke-width="1"/>
+  <rect width="850" height="90" rx="16" fill="#06091a"/>
+  <rect width="850" height="90" rx="16" fill="none" stroke="#6366f1" stroke-opacity="0.2" stroke-width="1.2"/>
 
-  <!-- Animated gradient top line -->
+  <!-- Top Animated Line -->
   <g clip-path="url(#fclip)">
     <rect width="1700" height="3" fill="url(#ftl)">
       <animateTransform attributeName="transform" type="translate" values="0,0;-850,0;0,0" dur="4s" repeatCount="indefinite"/>
@@ -26,34 +46,34 @@
   </g>
 
   <!-- LEFT: Quote -->
-  <text x="28" y="40" font-family="'Segoe UI',system-ui,sans-serif" font-size="14" font-weight="600" fill="#e2e8f0" font-style="italic">"Build. Break. Learn. Repeat."</text>
-  <text x="28" y="62" font-family="monospace" font-size="11" fill="#334155">// arpit's dev mantra</text>
+  <text x="28" y="38" class="quote-txt" fill="#e2e8f0" font-style="italic">"Build. Break. Learn. Repeat."</text>
+  <text x="28" y="58" class="quote-sub" fill="#64748b">// arpit's dev mantra</text>
 
-  <!-- CENTER: Logo ring -->
-  <circle cx="425" cy="47" r="28" fill="none" stroke="url(#fring)" stroke-width="2.5">
-    <animate attributeName="r" values="26;30;26" dur="3s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values=".6;1;.6" dur="3s" repeatCount="indefinite"/>
+  <!-- CENTER: Logo -->
+  <circle cx="425" cy="45" r="26" fill="none" stroke="url(#fring)" stroke-width="2">
+    <animate attributeName="r" values="24;28;24" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="425" cy="47" r="20" fill="#070b17"/>
-  <text x="425" y="55" font-size="20" text-anchor="middle">🚀</text>
-  <text x="425" y="80" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" font-weight="600" fill="#1e293b" text-anchor="middle" letter-spacing=".8">ARPIT RANA</text>
+  <circle cx="425" cy="45" r="18" fill="#070b17"/>
+  <text x="425" y="52" font-size="18" text-anchor="middle">🚀</text>
+  <text x="425" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif" font-size="9" font-weight="700" fill="#475569" text-anchor="middle" letter-spacing="1">ARPIT RANA</text>
 
-  <!-- RIGHT: Pills -->
-  <rect x="536" y="18" width="154" height="22" rx="11" fill="#10b981" fill-opacity=".1" stroke="#10b981" stroke-opacity=".35"/>
-  <circle cx="549" cy="29" r="4" fill="#10b981">
-    <animate attributeName="opacity" values=".4;1;.4" dur="1.8s" repeatCount="indefinite"/>
+  <!-- RIGHT: Status Pills -->
+  <rect x="540" y="18" width="145" height="22" rx="11" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-opacity="0.35"/>
+  <circle cx="552" cy="29" r="3.5" fill="#10b981">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/>
   </circle>
-  <text x="558" y="34" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" font-weight="600" fill="#34d399">Open to Internships</text>
+  <text x="562" y="33" class="pill-txt" fill="#34d399">Open to Internships</text>
 
-  <rect x="698" y="18" width="134" height="22" rx="11" fill="#34d399" fill-opacity=".1" stroke="#34d399" stroke-opacity=".3"/>
-  <circle cx="711" cy="29" r="4" fill="#34d399">
-    <animate attributeName="opacity" values=".4;1;.4" dur="2.2s" repeatCount="indefinite"/>
+  <rect x="695" y="18" width="130" height="22" rx="11" fill="#34d399" fill-opacity="0.1" stroke="#34d399" stroke-opacity="0.3"/>
+  <circle cx="707" cy="29" r="3.5" fill="#34d399">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite"/>
   </circle>
-  <text x="720" y="34" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" font-weight="600" fill="#34d399">Active Learner</text>
+  <text x="716" y="33" class="pill-txt" fill="#34d399">Active Learner</text>
 
-  <rect x="536" y="50" width="144" height="22" rx="11" fill="#a855f7" fill-opacity=".1" stroke="#a855f7" stroke-opacity=".3"/>
-  <circle cx="549" cy="61" r="4" fill="#c084fc">
-    <animate attributeName="opacity" values=".4;1;.4" dur="2.5s" repeatCount="indefinite"/>
+  <rect x="540" y="48" width="145" height="22" rx="11" fill="#a855f7" fill-opacity="0.1" stroke="#a855f7" stroke-opacity="0.3"/>
+  <circle cx="552" cy="59" r="3.5" fill="#c084fc">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
   </circle>
-  <text x="558" y="66" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" font-weight="600" fill="#c084fc">B.Tech CSE · LPU</text>
+  <text x="562" y="63" class="pill-txt" fill="#c084fc">B.Tech CSE · LPU</text>
 </svg>
