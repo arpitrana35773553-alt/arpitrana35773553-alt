@@ -4,16 +4,16 @@
       @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&amp;display=swap');
       .lbl-cond {
         font-family: 'Barlow Condensed', 'Arial Narrow', -apple-system-condensed, sans-serif-condensed, sans-serif;
-        font-size: 12px;
+        font-size: 11.5px;
         font-weight: 700;
         letter-spacing: 1.2px;
         text-transform: uppercase;
       }
       .val-cond {
         font-family: 'Barlow Condensed', 'Arial Narrow', -apple-system-condensed, sans-serif-condensed, sans-serif;
-        font-size: 16px;
+        font-size: 14.5px;
         font-weight: 800;
-        letter-spacing: 0.8px;
+        letter-spacing: 0.5px;
         text-transform: uppercase;
       }
     </style>
@@ -61,8 +61,8 @@
       <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
     </circle>
 
-    <text x="62" y="32" class="lbl-cond" fill="#38bdf8">LOCATION</text>
-    <text x="62" y="52" class="val-cond" fill="#f0f9ff">HIMACHAL, INDIA</text>
+    <text x="60" y="32" class="lbl-cond" fill="#38bdf8">LOCATION</text>
+    <text x="60" y="52" class="val-cond" fill="#f0f9ff">HIMACHAL, INDIA</text>
   </g>
 
   <!-- ================= BADGE 2: DEGREE ================= -->
@@ -82,8 +82,8 @@
       <animate attributeName="opacity" values="0.4;1;0.4" dur="1.7s" repeatCount="indefinite"/>
     </circle>
 
-    <text x="62" y="32" class="lbl-cond" fill="#60a5fa">DEGREE</text>
-    <text x="62" y="52" class="val-cond" fill="#f0f9ff">B.TECH CSE CORE</text>
+    <text x="60" y="32" class="lbl-cond" fill="#60a5fa">DEGREE</text>
+    <text x="60" y="52" class="val-cond" fill="#f0f9ff">B.TECH CSE CORE</text>
   </g>
 
   <!-- ================= BADGE 3: UNIVERSITY ================= -->
@@ -103,8 +103,8 @@
       <animate attributeName="opacity" values="0.4;1;0.4" dur="1.9s" repeatCount="indefinite"/>
     </circle>
 
-    <text x="62" y="32" class="lbl-cond" fill="#a78bfa">UNIVERSITY</text>
-    <text x="62" y="52" class="val-cond" fill="#f0f9ff">LPU PUNJAB</text>
+    <text x="60" y="32" class="lbl-cond" fill="#a78bfa">UNIVERSITY</text>
+    <text x="60" y="52" class="val-cond" fill="#f0f9ff">LPU PUNJAB</text>
   </g>
 
   <!-- ================= BADGE 4: FOCUS ================= -->
@@ -124,7 +124,7 @@
       <animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" repeatCount="indefinite"/>
     </circle>
 
-    <text x="62" y="32" class="lbl-cond" fill="#f472b6">FOCUS AREA</text>
-    <text x="62" y="52" class="val-cond" fill="#f0f9ff">AI + CYBERSECURITY</text>
+    <text x="60" y="32" class="lbl-cond" fill="#f472b6">FOCUS AREA</text>
+    <text x="60" y="52" class="val-cond" fill="#f0f9ff">AI &amp; CYBERSECURITY</text>
   </g>
 </svg>
