@@ -1,0 +1,42 @@
+<svg width="850" height="85" viewBox="0 0 850 85" xmlns="http://www.w3.org/2000/svg">
+  <!-- Card 1: Location -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-4;0,0" dur="4.5s" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1" keyTimes="0;.5;1" repeatCount="indefinite"/>
+    <rect x="10" y="10" width="196" height="64" rx="14" fill="#0b1120" stroke="#0284c7" stroke-opacity=".4" stroke-width="1"/>
+    <rect x="10" y="10" width="4" height="64" rx="3" fill="#0284c7" opacity=".85"/>
+    <rect x="22" y="21" width="36" height="36" rx="10" fill="#0284c7" fill-opacity=".15"/>
+    <text x="40" y="45" font-size="18" text-anchor="middle">🏔️</text>
+    <text x="68" y="33" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" font-weight="700" fill="#475569" letter-spacing=".8">LOCATION</text>
+    <text x="68" y="53" font-family="'Segoe UI',system-ui,sans-serif" font-size="13" font-weight="700" fill="#7dd3fc">Himachal, India</text>
+  </g>
+  <!-- Card 2: Education -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-4;0,0" dur="5.2s" begin="0.4s" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1" keyTimes="0;.5;1" repeatCount="indefinite"/>
+    <rect x="215" y="10" width="196" height="64" rx="14" fill="#0b1120" stroke="#3b82f6" stroke-opacity=".4" stroke-width="1"/>
+    <rect x="215" y="10" width="4" height="64" rx="3" fill="#3b82f6" opacity=".85"/>
+    <rect x="227" y="21" width="36" height="36" rx="10" fill="#3b82f6" fill-opacity=".15"/>
+    <text x="245" y="45" font-size="18" text-anchor="middle">🎓</text>
+    <text x="273" y="33" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" font-weight="700" fill="#475569" letter-spacing=".8">DEGREE</text>
+    <text x="273" y="53" font-family="'Segoe UI',system-ui,sans-serif" font-size="13" font-weight="700" fill="#93c5fd">B.Tech CSE Core</text>
+  </g>
+  <!-- Card 3: University -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-4;0,0" dur="4.8s" begin="0.8s" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1" keyTimes="0;.5;1" repeatCount="indefinite"/>
+    <rect x="420" y="10" width="196" height="64" rx="14" fill="#0b1120" stroke="#8b5cf6" stroke-opacity=".4" stroke-width="1"/>
+    <rect x="420" y="10" width="4" height="64" rx="3" fill="#8b5cf6" opacity=".85"/>
+    <rect x="432" y="21" width="36" height="36" rx="10" fill="#8b5cf6" fill-opacity=".15"/>
+    <text x="450" y="45" font-size="18" text-anchor="middle">🏛️</text>
+    <text x="478" y="33" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" font-weight="700" fill="#475569" letter-spacing=".8">UNIVERSITY</text>
+    <text x="478" y="53" font-family="'Segoe UI',system-ui,sans-serif" font-size="13" font-weight="700" fill="#c4b5fd">LPU Punjab</text>
+  </g>
+  <!-- Card 4: Focus -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-4;0,0" dur="5.5s" begin="1.2s" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1" keyTimes="0;.5;1" repeatCount="indefinite"/>
+    <rect x="625" y="10" width="214" height="64" rx="14" fill="#0b1120" stroke="#ec4899" stroke-opacity=".4" stroke-width="1"/>
+    <rect x="625" y="10" width="4" height="64" rx="3" fill="#ec4899" opacity=".85"/>
+    <rect x="637" y="21" width="36" height="36" rx="10" fill="#ec4899" fill-opacity=".15"/>
+    <text x="655" y="45" font-size="18" text-anchor="middle">🤖</text>
+    <text x="683" y="33" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" font-weight="700" fill="#475569" letter-spacing=".8">SPECIALIZATION</text>
+    <text x="683" y="53" font-family="'Segoe UI',system-ui,sans-serif" font-size="13" font-weight="700" fill="#f472b6">AI + CyberSec</text>
+  </g>
+</svg>
