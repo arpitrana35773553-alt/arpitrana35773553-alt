@@ -1,143 +1,245 @@
-<svg width="850" height="180" viewBox="0 0 850 180" xmlns="http://www.w3.org/2000/svg">
+<svg width="850" height="210" viewBox="0 0 850 210" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      .card-title {
+      .hdr-txt {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 800;
         letter-spacing: 1.2px;
         text-transform: uppercase;
       }
-      .stat-num {
+      .metric-lbl {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-        font-size: 16px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+      .metric-val {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        font-size: 13px;
         font-weight: 800;
       }
-      .stat-label {
+      .lang-title {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
         font-size: 11px;
-        font-weight: 600;
-        color: #94a3b8;
-      }
-      .lang-name {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-        font-size: 11.5px;
         font-weight: 700;
       }
       .lang-pct {
-        font-family: 'Fira Code', monospace;
+        font-family: 'Fira Code', 'Courier New', monospace;
         font-size: 11px;
-        font-weight: 600;
+        font-weight: 700;
+      }
+      .matrix-lbl {
+        font-family: 'Fira Code', 'Courier New', monospace;
+        font-size: 9px;
+        color: #475569;
       }
     </style>
 
-    <linearGradient id="gst-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="gs-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#050816"/>
       <stop offset="50%" stop-color="#080e22"/>
       <stop offset="100%" stop-color="#120822"/>
     </linearGradient>
 
-    <filter id="gst-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+    <!-- Animated Neon Beam Gradients -->
+    <linearGradient id="neon-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="50%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#00f2fe"/>
+    </linearGradient>
+
+    <linearGradient id="laser-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="gs-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <clipPath id="gst-clip">
-      <rect width="850" height="180" rx="16"/>
+    <filter id="laser-filter" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <clipPath id="gs-clip">
+      <rect width="850" height="210" rx="16"/>
     </clipPath>
   </defs>
 
-  <g clip-path="url(#gst-clip)">
-    <!-- Base -->
-    <rect width="850" height="180" fill="url(#gst-bg)"/>
-    <rect width="850" height="180" rx="16" fill="none" stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1.2"/>
+  <g clip-path="url(#gs-clip)">
+    <!-- Base Background -->
+    <rect width="850" height="210" fill="url(#gs-bg)"/>
 
-    <!-- ================= LEFT CARD: GITHUB TELEMETRY ================= -->
-    <g transform="translate(16, 14)">
-      <!-- Panel Box -->
-      <rect width="400" height="152" rx="12" fill="#070c1e" stroke="#38bdf8" stroke-opacity="0.35" stroke-width="1"/>
+    <!-- Ambient Glowing Blobs -->
+    <circle cx="90" cy="180" r="140" fill="#00f2fe" fill-opacity="0.1" filter="url(#gs-glow)">
+      <animate attributeName="fill-opacity" values="0.06;0.16;0.06" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="750" cy="40" r="140" fill="#9d4edd" fill-opacity="0.1" filter="url(#gs-glow)">
+      <animate attributeName="fill-opacity" values="0.06;0.15;0.06" dur="5s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Border -->
+    <rect width="850" height="210" rx="16" fill="none" stroke="#38bdf8" stroke-opacity="0.22" stroke-width="1.2"/>
+
+    <!-- ================= LEFT CARD: GITHUB TELEMETRY & LIVE HEATMAP ================= -->
+    <g transform="translate(16, 12)">
+      <rect width="400" height="186" rx="12" fill="#070c1e" stroke="#38bdf8" stroke-opacity="0.35" stroke-width="1"/>
       
-      <!-- Panel Header -->
-      <text x="18" y="24" class="card-title" fill="#38bdf8">⚡ GITHUB METRICS &amp; ACTIVITY</text>
-      <circle cx="375" cy="18" r="4" fill="#10b981" filter="url(#gst-glow)">
-        <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/>
+      <!-- Card Header -->
+      <text x="16" y="24" class="hdr-txt" fill="#38bdf8">⚡ GITHUB METRICS &amp; ACTIVITY</text>
+      <circle cx="376" cy="18" r="4" fill="#10b981" filter="url(#gs-glow)">
+        <animate attributeName="r" values="3.5;6;3.5" dur="1.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
       </circle>
 
-      <!-- Stat Box 1: Streak -->
-      <g transform="translate(18, 38)">
-        <rect width="176" height="46" rx="8" fill="#0b1633" stroke="#3b82f6" stroke-opacity="0.3"/>
-        <text x="12" y="22" class="stat-label">CURRENT STREAK</text>
-        <text x="12" y="38" class="stat-num" fill="#60a5fa">🔥 ACTIVE &amp; DAILY</text>
+      <!-- 4 Floating Metric Badges -->
+      <!-- Metric 1: Streak -->
+      <g transform="translate(16, 36)">
+        <animateTransform attributeName="transform" type="translate" values="16,36; 16,33; 16,36" dur="3s" repeatCount="indefinite"/>
+        <rect width="176" height="42" rx="8" fill="#0b1633" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1"/>
+        <rect width="3" height="42" rx="1.5" fill="#3b82f6"/>
+        <text x="12" y="18" class="metric-lbl" fill="#94a3b8">DAILY STREAK</text>
+        <text x="12" y="34" class="metric-val" fill="#60a5fa">🔥 100% ACTIVE</text>
       </g>
 
-      <!-- Stat Box 2: Total Repos & Code -->
-      <g transform="translate(206, 38)">
-        <rect width="176" height="46" rx="8" fill="#0b1633" stroke="#8b5cf6" stroke-opacity="0.3"/>
-        <text x="12" y="22" class="stat-label">CONTRIBUTIONS</text>
-        <text x="12" y="38" class="stat-num" fill="#c4b5fd">🚀 GROWING FAST</text>
+      <!-- Metric 2: Contributions -->
+      <g transform="translate(208, 36)">
+        <animateTransform attributeName="transform" type="translate" values="208,36; 208,33; 208,36" dur="3.4s" begin="0.3s" repeatCount="indefinite"/>
+        <rect width="176" height="42" rx="8" fill="#0b1633" stroke="#8b5cf6" stroke-opacity="0.4" stroke-width="1"/>
+        <rect width="3" height="42" rx="1.5" fill="#8b5cf6"/>
+        <text x="12" y="18" class="metric-lbl" fill="#94a3b8">COMMITS &amp; PRs</text>
+        <text x="12" y="34" class="metric-val" fill="#c4b5fd">🚀 CONSTANT PUSH</text>
       </g>
 
-      <!-- Stat Box 3: Quality -->
-      <g transform="translate(18, 92)">
-        <rect width="176" height="46" rx="8" fill="#0b1633" stroke="#10b981" stroke-opacity="0.3"/>
-        <text x="12" y="22" class="stat-label">SYSTEM UPTIME</text>
-        <text x="12" y="38" class="stat-num" fill="#34d399">⚡ 99.9% COMMITTED</text>
+      <!-- Metric 3: Code Velocity -->
+      <g transform="translate(16, 84)">
+        <animateTransform attributeName="transform" type="translate" values="16,84; 16,81; 16,84" dur="3.8s" begin="0.6s" repeatCount="indefinite"/>
+        <rect width="176" height="42" rx="8" fill="#0b1633" stroke="#10b981" stroke-opacity="0.4" stroke-width="1"/>
+        <rect width="3" height="42" rx="1.5" fill="#10b981"/>
+        <text x="12" y="18" class="metric-lbl" fill="#94a3b8">SYSTEM UPTIME</text>
+        <text x="12" y="34" class="metric-val" fill="#34d399">⚡ 99.9% COMMITTED</text>
       </g>
 
-      <!-- Stat Box 4: Focus -->
-      <g transform="translate(206, 92)">
-        <rect width="176" height="46" rx="8" fill="#0b1633" stroke="#ec4899" stroke-opacity="0.3"/>
-        <text x="12" y="22" class="stat-label">CODE VELOCITY</text>
-        <text x="12" y="38" class="stat-num" fill="#f472b6">🤖 HIGH AGILITY</text>
+      <!-- Metric 4: Focus -->
+      <g transform="translate(208, 84)">
+        <animateTransform attributeName="transform" type="translate" values="208,84; 208,81; 208,84" dur="4.2s" begin="0.9s" repeatCount="indefinite"/>
+        <rect width="176" height="42" rx="8" fill="#0b1633" stroke="#ec4899" stroke-opacity="0.4" stroke-width="1"/>
+        <rect width="3" height="42" rx="1.5" fill="#ec4899"/>
+        <text x="12" y="18" class="metric-lbl" fill="#94a3b8">BUILD VELOCITY</text>
+        <text x="12" y="34" class="metric-val" fill="#f472b6">🤖 HIGH AGILITY</text>
+      </g>
+
+      <!-- Live Animated GitHub Commit Matrix / Wave Grid (14 columns x 3 rows) -->
+      <g transform="translate(16, 138)">
+        <text x="0" y="-4" class="matrix-lbl">LIVE COMMIT ACTIVITY WAVE</text>
+        
+        <!-- Row 1 -->
+        <rect x="0" y="4" width="22" height="10" rx="3" fill="#10b981" fill-opacity="0.3"><animate attributeName="fill-opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite"/></rect>
+        <rect x="26" y="4" width="22" height="10" rx="3" fill="#10b981" fill-opacity="0.7"><animate attributeName="fill-opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/></rect>
+        <rect x="52" y="4" width="22" height="10" rx="3" fill="#10b981" fill-opacity="0.4"><animate attributeName="fill-opacity" values="0.2;0.9;0.2" dur="2.2s" repeatCount="indefinite"/></rect>
+        <rect x="78" y="4" width="22" height="10" rx="3" fill="#10b981" fill-opacity="0.9"><animate attributeName="fill-opacity" values="0.5;1;0.5" dur="1.6s" repeatCount="indefinite"/></rect>
+        <rect x="104" y="4" width="22" height="10" rx="3" fill="#10b981" fill-opacity="0.5"><animate attributeName="fill-opacity" values="0.3;0.8;0.3" dur="2.4s" repeatCount="indefinite"/></rect>
+        <rect x="130" y="4" width="22" height="10" rx="3" fill="#10b981" fill-opacity="1.0"><animate attributeName="fill-opacity" values="0.6;1;0.6" dur="1.4s" repeatCount="indefinite"/></rect>
+        <rect x="156" y="4" width="22" height="10" rx="3" fill="#10b981" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.3;0.9;0.3" dur="2.0s" repeatCount="indefinite"/></rect>
+        <rect x="182" y="4" width="22" height="10" rx="3" fill="#10b981" fill-opacity="0.8"><animate attributeName="fill-opacity" values="0.4;1;0.4" dur="1.7s" repeatCount="indefinite"/></rect>
+        <rect x="208" y="4" width="22" height="10" rx="3" fill="#10b981" fill-opacity="0.4"><animate attributeName="fill-opacity" values="0.2;0.7;0.2" dur="2.3s" repeatCount="indefinite"/></rect>
+        <rect x="234" y="4" width="22" height="10" rx="3" fill="#10b981" fill-opacity="0.9"><animate attributeName="fill-opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/></rect>
+        <rect x="260" y="4" width="22" height="10" rx="3" fill="#10b981" fill-opacity="0.7"><animate attributeName="fill-opacity" values="0.3;0.8;0.3" dur="2.1s" repeatCount="indefinite"/></rect>
+        <rect x="286" y="4" width="22" height="10" rx="3" fill="#10b981" fill-opacity="1.0"><animate attributeName="fill-opacity" values="0.6;1;0.6" dur="1.3s" repeatCount="indefinite"/></rect>
+        <rect x="312" y="4" width="22" height="10" rx="3" fill="#10b981" fill-opacity="0.5"><animate attributeName="fill-opacity" values="0.2;0.8;0.2" dur="2.5s" repeatCount="indefinite"/></rect>
+        <rect x="338" y="4" width="28" height="10" rx="3" fill="#10b981" fill-opacity="0.9"><animate attributeName="fill-opacity" values="0.5;1;0.5" dur="1.6s" repeatCount="indefinite"/></rect>
+
+        <!-- Row 2 -->
+        <rect x="0" y="18" width="22" height="10" rx="3" fill="#38bdf8" fill-opacity="0.6"><animate attributeName="fill-opacity" values="0.3;0.9;0.3" dur="1.9s" repeatCount="indefinite"/></rect>
+        <rect x="26" y="18" width="22" height="10" rx="3" fill="#38bdf8" fill-opacity="0.9"><animate attributeName="fill-opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/></rect>
+        <rect x="52" y="18" width="22" height="10" rx="3" fill="#38bdf8" fill-opacity="0.4"><animate attributeName="fill-opacity" values="0.2;0.7;0.2" dur="2.1s" repeatCount="indefinite"/></rect>
+        <rect x="78" y="18" width="22" height="10" rx="3" fill="#38bdf8" fill-opacity="0.8"><animate attributeName="fill-opacity" values="0.4;1;0.4" dur="1.7s" repeatCount="indefinite"/></rect>
+        <rect x="104" y="18" width="22" height="10" rx="3" fill="#38bdf8" fill-opacity="1.0"><animate attributeName="fill-opacity" values="0.6;1;0.6" dur="1.3s" repeatCount="indefinite"/></rect>
+        <rect x="130" y="18" width="22" height="10" rx="3" fill="#38bdf8" fill-opacity="0.5"><animate attributeName="fill-opacity" values="0.2;0.8;0.2" dur="2.4s" repeatCount="indefinite"/></rect>
+        <rect x="156" y="18" width="22" height="10" rx="3" fill="#38bdf8" fill-opacity="0.9"><animate attributeName="fill-opacity" values="0.5;1;0.5" dur="1.6s" repeatCount="indefinite"/></rect>
+        <rect x="182" y="18" width="22" height="10" rx="3" fill="#38bdf8" fill-opacity="0.7"><animate attributeName="fill-opacity" values="0.3;0.9;0.3" dur="2.0s" repeatCount="indefinite"/></rect>
+        <rect x="208" y="18" width="22" height="10" rx="3" fill="#38bdf8" fill-opacity="1.0"><animate attributeName="fill-opacity" values="0.6;1;0.6" dur="1.4s" repeatCount="indefinite"/></rect>
+        <rect x="234" y="18" width="22" height="10" rx="3" fill="#38bdf8" fill-opacity="0.4"><animate attributeName="fill-opacity" values="0.2;0.8;0.2" dur="2.2s" repeatCount="indefinite"/></rect>
+        <rect x="260" y="18" width="22" height="10" rx="3" fill="#38bdf8" fill-opacity="0.8"><animate attributeName="fill-opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/></rect>
+        <rect x="286" y="18" width="22" height="10" rx="3" fill="#38bdf8" fill-opacity="0.5"><animate attributeName="fill-opacity" values="0.3;0.8;0.3" dur="2.3s" repeatCount="indefinite"/></rect>
+        <rect x="312" y="18" width="22" height="10" rx="3" fill="#38bdf8" fill-opacity="0.9"><animate attributeName="fill-opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/></rect>
+        <rect x="338" y="18" width="28" height="10" rx="3" fill="#38bdf8" fill-opacity="1.0"><animate attributeName="fill-opacity" values="0.6;1;0.6" dur="1.2s" repeatCount="indefinite"/></rect>
       </g>
     </g>
 
-    <!-- ================= RIGHT CARD: LANGUAGE DISTRIBUTION ================= -->
-    <g transform="translate(434, 14)">
-      <rect width="400" height="152" rx="12" fill="#070c1e" stroke="#8b5cf6" stroke-opacity="0.35" stroke-width="1"/>
+    <!-- ================= RIGHT CARD: DYNAMIC ANIMATED LANGUAGE BARS ================= -->
+    <g transform="translate(434, 12)">
+      <rect width="400" height="186" rx="12" fill="#070c1e" stroke="#8b5cf6" stroke-opacity="0.35" stroke-width="1"/>
       
-      <text x="18" y="24" class="card-title" fill="#c4b5fd">📊 TOP DOMAINS &amp; LANGUAGES</text>
+      <text x="16" y="24" class="hdr-txt" fill="#c4b5fd">📊 TOP DOMAINS &amp; LANGUAGES</text>
 
       <!-- Bar 1: Python & AI -->
-      <g transform="translate(18, 40)">
-        <text x="0" y="10" class="lang-name" fill="#93c5fd">🐍 Python &amp; AI Stack</text>
-        <text x="364" y="10" class="lang-pct" fill="#93c5fd" text-anchor="end">40%</text>
-        <rect y="16" width="364" height="6" rx="3" fill="#0b1633"/>
-        <rect y="16" width="145" height="6" rx="3" fill="#38bdf8" filter="url(#gst-glow)">
-          <animate attributeName="width" values="120;145;120" dur="4s" repeatCount="indefinite"/>
+      <g transform="translate(16, 42)">
+        <text x="0" y="10" class="lang-title" fill="#93c5fd">🐍 Python &amp; AI Neural Stack</text>
+        <text x="368" y="10" class="lang-pct" fill="#93c5fd" text-anchor="end">40%</text>
+        
+        <!-- Track -->
+        <rect y="16" width="368" height="8" rx="4" fill="#0b1633"/>
+        <!-- Animated Fill Bar -->
+        <rect y="16" width="147" height="8" rx="4" fill="#38bdf8" filter="url(#gs-glow)">
+          <animate attributeName="width" values="120;147;120" dur="4s" repeatCount="indefinite"/>
+        </rect>
+        <!-- Laser Pulse on top of bar -->
+        <rect y="16" width="30" height="8" rx="4" fill="url(#laser-glow)">
+          <animate attributeName="x" values="0;120;0" dur="2.5s" repeatCount="indefinite"/>
         </rect>
       </g>
 
-      <!-- Bar 2: C++ & Core -->
-      <g transform="translate(18, 68)">
-        <text x="0" y="10" class="lang-name" fill="#c4b5fd">⚡ C++ &amp; Algorithms</text>
-        <text x="364" y="10" class="lang-pct" fill="#c4b5fd" text-anchor="end">30%</text>
-        <rect y="16" width="364" height="6" rx="3" fill="#0b1633"/>
-        <rect y="16" width="110" height="6" rx="3" fill="#8b5cf6">
-          <animate attributeName="width" values="95;110;95" dur="4.5s" repeatCount="indefinite"/>
+      <!-- Bar 2: C++ & Algorithms -->
+      <g transform="translate(16, 78)">
+        <text x="0" y="10" class="lang-title" fill="#c4b5fd">⚡ C++ &amp; Core Problem Solving</text>
+        <text x="368" y="10" class="lang-pct" fill="#c4b5fd" text-anchor="end">30%</text>
+        
+        <rect y="16" width="368" height="8" rx="4" fill="#0b1633"/>
+        <rect y="16" width="110" height="8" rx="4" fill="#8b5cf6" filter="url(#gs-glow)">
+          <animate attributeName="width" values="90;110;90" dur="4.5s" repeatCount="indefinite"/>
+        </rect>
+        <rect y="16" width="26" height="8" rx="4" fill="url(#laser-glow)">
+          <animate attributeName="x" values="0;85;0" dur="2.8s" repeatCount="indefinite"/>
         </rect>
       </g>
 
       <!-- Bar 3: Web & TypeScript -->
-      <g transform="translate(18, 96)">
-        <text x="0" y="10" class="lang-name" fill="#fde047">🟡 JavaScript / TS / Web</text>
-        <text x="364" y="10" class="lang-pct" fill="#fde047" text-anchor="end">20%</text>
-        <rect y="16" width="364" height="6" rx="3" fill="#0b1633"/>
-        <rect y="16" width="73" height="6" rx="3" fill="#eab308">
-          <animate attributeName="width" values="60;73;60" dur="5s" repeatCount="indefinite"/>
+      <g transform="translate(16, 114)">
+        <text x="0" y="10" class="lang-title" fill="#fde047">🟡 JavaScript / TypeScript / React</text>
+        <text x="368" y="10" class="lang-pct" fill="#fde047" text-anchor="end">20%</text>
+        
+        <rect y="16" width="368" height="8" rx="4" fill="#0b1633"/>
+        <rect y="16" width="74" height="8" rx="4" fill="#eab308" filter="url(#gs-glow)">
+          <animate attributeName="width" values="55;74;55" dur="5s" repeatCount="indefinite"/>
+        </rect>
+        <rect y="16" width="20" height="8" rx="4" fill="url(#laser-glow)">
+          <animate attributeName="x" values="0;54;0" dur="3.0s" repeatCount="indefinite"/>
         </rect>
       </g>
 
-      <!-- Bar 4: CyberSec Tools -->
-      <g transform="translate(18, 124)">
-        <text x="0" y="10" class="lang-name" fill="#34d399">🛡️ Cybersecurity &amp; Linux</text>
-        <text x="364" y="10" class="lang-pct" fill="#34d399" text-anchor="end">10%</text>
-        <rect y="16" width="364" height="6" rx="3" fill="#0b1633"/>
-        <rect y="16" width="36" height="6" rx="3" fill="#10b981">
-          <animate attributeName="width" values="28;36;28" dur="3.5s" repeatCount="indefinite"/>
+      <!-- Bar 4: Cybersecurity & Linux -->
+      <g transform="translate(16, 150)">
+        <text x="0" y="10" class="lang-title" fill="#34d399">🛡️ Cybersecurity, Sec-Ops &amp; Linux</text>
+        <text x="368" y="10" class="lang-pct" fill="#34d399" text-anchor="end">10%</text>
+        
+        <rect y="16" width="368" height="8" rx="4" fill="#0b1633"/>
+        <rect y="16" width="37" height="8" rx="4" fill="#10b981" filter="url(#gs-glow)">
+          <animate attributeName="width" values="26;37;26" dur="3.5s" repeatCount="indefinite"/>
+        </rect>
+        <rect y="16" width="16" height="8" rx="4" fill="url(#laser-glow)">
+          <animate attributeName="x" values="0;20;0" dur="2.2s" repeatCount="indefinite"/>
         </rect>
       </g>
     </g>
