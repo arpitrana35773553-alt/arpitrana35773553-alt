@@ -1,32 +1,25 @@
 <svg width="850" height="270" viewBox="0 0 850 270" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      .sec-head {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-        font-size: 16px;
+      .sec-title-clean {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 15px;
         font-weight: 800;
         letter-spacing: 1.5px;
         text-transform: uppercase;
       }
-      .sec-tag {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-        font-size: 10px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-      }
-      .cat-badge {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+      .cat-badge-clean {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
         font-size: 11px;
         font-weight: 800;
         letter-spacing: 0.8px;
         text-transform: uppercase;
       }
-      .chip-label {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+      .chip-clean {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
         font-size: 11.5px;
         font-weight: 700;
-        letter-spacing: 0.3px;
+        letter-spacing: 0.2px;
       }
     </style>
 
@@ -60,157 +53,152 @@
     <!-- Outer Border -->
     <rect width="850" height="270" rx="16" fill="none" stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1.2"/>
 
-    <!-- ================= HEADER ROW (CLEAN NO OVERLAP) ================= -->
+    <!-- ================= CLEAN HEADER (ZERO OVERLAP) ================= -->
     <g transform="translate(24, 16)">
-      <text x="0" y="16" class="sec-head" fill="#ffffff">⚙️ TECH STACK // ARSENAL</text>
-      
-      <!-- Tag safely positioned with 40px margin at x=260 -->
-      <rect x="250" y="1" width="140" height="20" rx="6" fill="#00f2fe" fill-opacity="0.12" stroke="#00f2fe" stroke-opacity="0.4"/>
-      <text x="320" y="15" class="sec-tag" fill="#00f2fe" text-anchor="middle">CORE COMPETENCIES</text>
-
-      <line x1="405" y1="11" x2="800" y2="11" stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1"/>
+      <text x="0" y="15" class="sec-title-clean" fill="#ffffff">⚙️ TECH STACK // ARSENAL</text>
+      <line x1="240" y1="10" x2="800" y2="10" stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1"/>
     </g>
 
     <!-- ================= ROW 1: LANGUAGES ================= -->
     <g transform="translate(24, 52)">
       <!-- Category Badge -->
       <rect width="115" height="34" rx="8" fill="#0284c7" fill-opacity="0.18" stroke="#0284c7" stroke-opacity="0.45" stroke-width="1"/>
-      <text x="57" y="21" class="cat-badge" fill="#38bdf8" text-anchor="middle">⚡ LANGUAGES</text>
+      <text x="57" y="21" class="cat-badge-clean" fill="#38bdf8" text-anchor="middle">⚡ LANGUAGES</text>
 
       <!-- Python -->
       <g transform="translate(125, 0)">
         <animateTransform attributeName="transform" type="translate" values="125,0; 125,-2.5; 125,0" dur="3.2s" repeatCount="indefinite"/>
         <rect width="105" height="34" rx="8" fill="#09142b" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="52" y="21" class="chip-label" fill="#93c5fd" text-anchor="middle">🐍 Python</text>
+        <text x="52" y="21" class="chip-clean" fill="#93c5fd" text-anchor="middle">🐍 Python</text>
       </g>
       <!-- C++ -->
       <g transform="translate(238, 0)">
         <animateTransform attributeName="transform" type="translate" values="238,0; 238,-2.5; 238,0" dur="3.5s" begin="0.2s" repeatCount="indefinite"/>
         <rect width="88" height="34" rx="8" fill="#09142b" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="44" y="21" class="chip-label" fill="#c4b5fd" text-anchor="middle">⚡ C++</text>
+        <text x="44" y="21" class="chip-clean" fill="#c4b5fd" text-anchor="middle">⚡ C++</text>
       </g>
       <!-- C -->
       <g transform="translate(334, 0)">
         <animateTransform attributeName="transform" type="translate" values="334,0; 334,-2.5; 334,0" dur="3.8s" begin="0.4s" repeatCount="indefinite"/>
         <rect width="78" height="34" rx="8" fill="#09142b" stroke="#4f46e5" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="39" y="21" class="chip-label" fill="#a5b4fc" text-anchor="middle">🔵 C</text>
+        <text x="39" y="21" class="chip-clean" fill="#a5b4fc" text-anchor="middle">🔵 C</text>
       </g>
       <!-- JavaScript -->
       <g transform="translate(420, 0)">
         <animateTransform attributeName="transform" type="translate" values="420,0; 420,-2.5; 420,0" dur="4.1s" begin="0.6s" repeatCount="indefinite"/>
         <rect width="130" height="34" rx="8" fill="#09142b" stroke="#eab308" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="65" y="21" class="chip-label" fill="#fde047" text-anchor="middle">🟡 JavaScript</text>
+        <text x="65" y="21" class="chip-clean" fill="#fde047" text-anchor="middle">🟡 JavaScript</text>
       </g>
       <!-- TypeScript -->
       <g transform="translate(558, 0)">
         <animateTransform attributeName="transform" type="translate" values="558,0; 558,-2.5; 558,0" dur="4.4s" begin="0.8s" repeatCount="indefinite"/>
         <rect width="130" height="34" rx="8" fill="#09142b" stroke="#2563eb" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="65" y="21" class="chip-label" fill="#93c5fd" text-anchor="middle">🔷 TypeScript</text>
+        <text x="65" y="21" class="chip-clean" fill="#93c5fd" text-anchor="middle">🔷 TypeScript</text>
       </g>
     </g>
 
     <!-- ================= ROW 2: WEB / UI ================= -->
     <g transform="translate(24, 98)">
       <rect width="115" height="34" rx="8" fill="#10b981" fill-opacity="0.18" stroke="#10b981" stroke-opacity="0.45" stroke-width="1"/>
-      <text x="57" y="21" class="cat-badge" fill="#34d399" text-anchor="middle">🌐 WEB &amp; UI</text>
+      <text x="57" y="21" class="cat-badge-clean" fill="#34d399" text-anchor="middle">🌐 WEB &amp; UI</text>
 
       <!-- HTML5 -->
       <g transform="translate(125, 0)">
         <animateTransform attributeName="transform" type="translate" values="125,0; 125,-2.5; 125,0" dur="3.1s" begin="0.1s" repeatCount="indefinite"/>
         <rect width="95" height="34" rx="8" fill="#09142b" stroke="#ef4444" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="47" y="21" class="chip-label" fill="#fca5a5" text-anchor="middle">🌐 HTML5</text>
+        <text x="47" y="21" class="chip-clean" fill="#fca5a5" text-anchor="middle">🌐 HTML5</text>
       </g>
       <!-- CSS3 -->
       <g transform="translate(228, 0)">
         <animateTransform attributeName="transform" type="translate" values="228,0; 228,-2.5; 228,0" dur="3.4s" begin="0.3s" repeatCount="indefinite"/>
         <rect width="90" height="34" rx="8" fill="#09142b" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="45" y="21" class="chip-label" fill="#93c5fd" text-anchor="middle">🎨 CSS3</text>
+        <text x="45" y="21" class="chip-clean" fill="#93c5fd" text-anchor="middle">🎨 CSS3</text>
       </g>
       <!-- React -->
       <g transform="translate(326, 0)">
         <animateTransform attributeName="transform" type="translate" values="326,0; 326,-2.5; 326,0" dur="3.7s" begin="0.5s" repeatCount="indefinite"/>
         <rect width="105" height="34" rx="8" fill="#09142b" stroke="#06b6d4" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="52" y="21" class="chip-label" fill="#67e8f9" text-anchor="middle">⚛️ React.js</text>
+        <text x="52" y="21" class="chip-clean" fill="#67e8f9" text-anchor="middle">⚛️ React.js</text>
       </g>
       <!-- Node.js -->
       <g transform="translate(439, 0)">
         <animateTransform attributeName="transform" type="translate" values="439,0; 439,-2.5; 439,0" dur="4.0s" begin="0.7s" repeatCount="indefinite"/>
         <rect width="110" height="34" rx="8" fill="#09142b" stroke="#16a34a" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="55" y="21" class="chip-label" fill="#86efac" text-anchor="middle">🟩 Node.js</text>
+        <text x="55" y="21" class="chip-clean" fill="#86efac" text-anchor="middle">🟩 Node.js</text>
       </g>
       <!-- REST APIs -->
       <g transform="translate(557, 0)">
         <animateTransform attributeName="transform" type="translate" values="557,0; 557,-2.5; 557,0" dur="4.3s" begin="0.9s" repeatCount="indefinite"/>
         <rect width="120" height="34" rx="8" fill="#09142b" stroke="#8b5cf6" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="60" y="21" class="chip-label" fill="#c4b5fd" text-anchor="middle">🔌 REST APIs</text>
+        <text x="60" y="21" class="chip-clean" fill="#c4b5fd" text-anchor="middle">🔌 REST APIs</text>
       </g>
     </g>
 
     <!-- ================= ROW 3: AI / ML ================= -->
     <g transform="translate(24, 144)">
       <rect width="115" height="34" rx="8" fill="#ec4899" fill-opacity="0.18" stroke="#ec4899" stroke-opacity="0.45" stroke-width="1"/>
-      <text x="57" y="21" class="cat-badge" fill="#f472b6" text-anchor="middle">🤖 AI &amp; ML</text>
+      <text x="57" y="21" class="cat-badge-clean" fill="#f472b6" text-anchor="middle">🤖 AI &amp; ML</text>
 
       <!-- Prompt Eng -->
       <g transform="translate(125, 0)">
         <animateTransform attributeName="transform" type="translate" values="125,0; 125,-2.5; 125,0" dur="3.3s" begin="0.15s" repeatCount="indefinite"/>
         <rect width="165" height="34" rx="8" fill="#09142b" stroke="#ec4899" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="82" y="21" class="chip-label" fill="#f9a8d4" text-anchor="middle">🤖 Prompt Engineering</text>
+        <text x="82" y="21" class="chip-clean" fill="#f9a8d4" text-anchor="middle">🤖 Prompt Engineering</text>
       </g>
       <!-- ML Basics -->
       <g transform="translate(298, 0)">
         <animateTransform attributeName="transform" type="translate" values="298,0; 298,-2.5; 298,0" dur="3.6s" begin="0.35s" repeatCount="indefinite"/>
         <rect width="150" height="34" rx="8" fill="#09142b" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="75" y="21" class="chip-label" fill="#d8b4fe" text-anchor="middle">🧠 Machine Learning</text>
+        <text x="75" y="21" class="chip-clean" fill="#d8b4fe" text-anchor="middle">🧠 Machine Learning</text>
       </g>
       <!-- NumPy -->
       <g transform="translate(456, 0)">
         <animateTransform attributeName="transform" type="translate" values="456,0; 456,-2.5; 456,0" dur="3.9s" begin="0.55s" repeatCount="indefinite"/>
         <rect width="95" height="34" rx="8" fill="#09142b" stroke="#8b5cf6" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="47" y="21" class="chip-label" fill="#c4b5fd" text-anchor="middle">📊 NumPy</text>
+        <text x="47" y="21" class="chip-clean" fill="#c4b5fd" text-anchor="middle">📊 NumPy</text>
       </g>
       <!-- SciKit-Learn -->
       <g transform="translate(559, 0)">
         <animateTransform attributeName="transform" type="translate" values="559,0; 559,-2.5; 559,0" dur="4.2s" begin="0.75s" repeatCount="indefinite"/>
         <rect width="128" height="34" rx="8" fill="#09142b" stroke="#d946ef" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="64" y="21" class="chip-label" fill="#f0abfc" text-anchor="middle">🔬 Scikit-Learn</text>
+        <text x="64" y="21" class="chip-clean" fill="#f0abfc" text-anchor="middle">🔬 Scikit-Learn</text>
       </g>
     </g>
 
     <!-- ================= ROW 4: DEVOPS & TOOLS ================= -->
     <g transform="translate(24, 190)">
       <rect width="115" height="34" rx="8" fill="#f97316" fill-opacity="0.18" stroke="#f97316" stroke-opacity="0.45" stroke-width="1"/>
-      <text x="57" y="21" class="cat-badge" fill="#fb923c" text-anchor="middle">🛠️ DEVOPS</text>
+      <text x="57" y="21" class="cat-badge-clean" fill="#fb923c" text-anchor="middle">🛠️ DEVOPS</text>
 
       <!-- Git -->
       <g transform="translate(125, 0)">
         <animateTransform attributeName="transform" type="translate" values="125,0; 125,-2.5; 125,0" dur="3.2s" begin="0.2s" repeatCount="indefinite"/>
         <rect width="80" height="34" rx="8" fill="#09142b" stroke="#f97316" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="40" y="21" class="chip-label" fill="#fdba74" text-anchor="middle">🔥 Git</text>
+        <text x="40" y="21" class="chip-clean" fill="#fdba74" text-anchor="middle">🔥 Git</text>
       </g>
       <!-- Linux -->
       <g transform="translate(213, 0)">
         <animateTransform attributeName="transform" type="translate" values="213,0; 213,-2.5; 213,0" dur="3.5s" begin="0.4s" repeatCount="indefinite"/>
         <rect width="95" height="34" rx="8" fill="#09142b" stroke="#eab308" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="47" y="21" class="chip-label" fill="#fde047" text-anchor="middle">🐧 Linux</text>
+        <text x="47" y="21" class="chip-clean" fill="#fde047" text-anchor="middle">🐧 Linux</text>
       </g>
       <!-- VS Code -->
       <g transform="translate(316, 0)">
         <animateTransform attributeName="transform" type="translate" values="316,0; 316,-2.5; 316,0" dur="3.8s" begin="0.6s" repeatCount="indefinite"/>
         <rect width="115" height="34" rx="8" fill="#09142b" stroke="#0ea5e9" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="57" y="21" class="chip-label" fill="#7dd3fc" text-anchor="middle">💻 VS Code</text>
+        <text x="57" y="21" class="chip-clean" fill="#7dd3fc" text-anchor="middle">💻 VS Code</text>
       </g>
       <!-- GitHub -->
       <g transform="translate(439, 0)">
         <animateTransform attributeName="transform" type="translate" values="439,0; 439,-2.5; 439,0" dur="4.1s" begin="0.8s" repeatCount="indefinite"/>
         <rect width="105" height="34" rx="8" fill="#09142b" stroke="#94a3b8" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="52" y="21" class="chip-label" fill="#cbd5e1" text-anchor="middle">🐙 GitHub</text>
+        <text x="52" y="21" class="chip-clean" fill="#cbd5e1" text-anchor="middle">🐙 GitHub</text>
       </g>
       <!-- Sec Tools -->
       <g transform="translate(552, 0)">
         <animateTransform attributeName="transform" type="translate" values="552,0; 552,-2.5; 552,0" dur="4.4s" begin="1.0s" repeatCount="indefinite"/>
         <rect width="125" height="34" rx="8" fill="#09142b" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.2"/>
-        <text x="62" y="21" class="chip-label" fill="#6ee7b7" text-anchor="middle">🛡️ Sec-Tools</text>
+        <text x="62" y="21" class="chip-clean" fill="#6ee7b7" text-anchor="middle">🛡️ Sec-Tools</text>
       </g>
     </g>
 
