@@ -1,20 +1,24 @@
 <svg width="850" height="95" viewBox="0 0 850 95" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      .quote-txt {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-        font-size: 14px;
+      @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&amp;family=Fira+Code:wght@600&amp;display=swap');
+      .quote-cond {
+        font-family: 'Barlow Condensed', 'Arial Narrow', -apple-system-condensed, sans-serif-condensed, sans-serif;
+        font-size: 18px;
         font-weight: 800;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
       }
-      .quote-sub {
+      .quote-sub-cond {
         font-family: 'Fira Code', 'Courier New', monospace;
         font-size: 11px;
       }
-      .pill-txt {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-        font-size: 11px;
-        font-weight: 700;
+      .pill-cond {
+        font-family: 'Barlow Condensed', 'Arial Narrow', -apple-system-condensed, sans-serif-condensed, sans-serif;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
       }
     </style>
 
@@ -67,8 +71,8 @@
 
     <!-- LEFT: Quote & Dev Mantra -->
     <g transform="translate(28, 20)">
-      <text x="0" y="20" class="quote-txt" fill="#f1f5f9" font-style="italic">"Build. Break. Learn. Repeat."</text>
-      <text x="0" y="42" class="quote-sub" fill="#64748b">// arpit's dev mantra ⚡ 60 fps</text>
+      <text x="0" y="20" class="quote-cond" fill="#f1f5f9" font-style="italic">"BUILD. BREAK. LEARN. REPEAT."</text>
+      <text x="0" y="42" class="quote-sub-cond" fill="#64748b">// arpit's dev mantra ⚡ 60 fps</text>
     </g>
 
     <!-- CENTER: Holographic Orbiting Rocket Core -->
@@ -90,7 +94,7 @@
         🚀
         <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="2s" repeatCount="indefinite"/>
       </text>
-      <text x="0" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif" font-size="9" font-weight="800" fill="#64748b" text-anchor="middle" letter-spacing="1">ARPIT RANA</text>
+      <text x="0" y="32" font-family="'Barlow Condensed', 'Arial Narrow', sans-serif-condensed, sans-serif" font-size="11" font-weight="900" fill="#64748b" text-anchor="middle" letter-spacing="1">ARPIT RANA</text>
     </g>
 
     <!-- RIGHT: Dynamic Animated Status Pills -->
@@ -102,7 +106,7 @@
         <circle cx="14" cy="12" r="3.5" fill="#10b981" filter="url(#f-glow)">
           <animate attributeName="opacity" values="0.4;1;0.4" dur="1.6s" repeatCount="indefinite"/>
         </circle>
-        <text x="24" y="16" class="pill-txt" fill="#34d399">Open to Internships</text>
+        <text x="24" y="16" class="pill-cond" fill="#34d399">OPEN TO INTERNSHIPS</text>
       </g>
 
       <!-- Pill 2: Active Learner -->
@@ -112,7 +116,7 @@
         <circle cx="14" cy="12" r="3.5" fill="#38bdf8" filter="url(#f-glow)">
           <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
         </circle>
-        <text x="24" y="16" class="pill-txt" fill="#38bdf8">Active Learner</text>
+        <text x="24" y="16" class="pill-cond" fill="#38bdf8">ACTIVE LEARNER</text>
       </g>
 
       <!-- Pill 3: B.Tech CSE -->
@@ -122,7 +126,7 @@
         <circle cx="14" cy="12" r="3.5" fill="#c084fc" filter="url(#f-glow)">
           <animate attributeName="opacity" values="0.4;1;0.4" dur="2.4s" repeatCount="indefinite"/>
         </circle>
-        <text x="24" y="16" class="pill-txt" fill="#c084fc">B.Tech CSE · LPU</text>
+        <text x="24" y="16" class="pill-cond" fill="#c084fc">B.TECH CSE · LPU</text>
       </g>
 
       <!-- Pill 4: Online Status -->
@@ -132,7 +136,7 @@
         <circle cx="14" cy="12" r="3.5" fill="#f72585" filter="url(#f-glow)">
           <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/>
         </circle>
-        <text x="24" y="16" class="pill-txt" fill="#f472b6">SecOps // AI</text>
+        <text x="24" y="16" class="pill-cond" fill="#f472b6">SECOPS // AI</text>
       </g>
     </g>
   </g>

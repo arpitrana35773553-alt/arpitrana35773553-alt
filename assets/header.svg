@@ -1,30 +1,33 @@
 <svg width="850" height="210" viewBox="0 0 850 210" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      .hdr-title {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
-        font-size: 42px;
-        font-weight: 800;
+      @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&amp;family=Fira+Code:wght@600&amp;display=swap');
+      
+      .f-cond-hero {
+        font-family: 'Barlow Condensed', 'Arial Narrow', -apple-system-condensed, sans-serif-condensed, sans-serif;
+        font-size: 52px;
+        font-weight: 900;
         letter-spacing: 2px;
         text-transform: uppercase;
       }
-      .hdr-tag {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-        font-size: 11px;
+      .f-cond-tag {
+        font-family: 'Barlow Condensed', 'Arial Narrow', -apple-system-condensed, sans-serif-condensed, sans-serif;
+        font-size: 13px;
         font-weight: 700;
-        letter-spacing: 1px;
+        letter-spacing: 1.2px;
         text-transform: uppercase;
       }
-      .hdr-role {
+      .f-cond-sub {
         font-family: 'Fira Code', 'Courier New', monospace;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 600;
       }
-      .hdr-chip {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
+      .f-cond-chip {
+        font-family: 'Barlow Condensed', 'Arial Narrow', -apple-system-condensed, sans-serif-condensed, sans-serif;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
       }
     </style>
 
@@ -114,37 +117,37 @@
 
     <!-- ================= LEFT CONTENT ================= -->
     <!-- Greeting Pill -->
-    <g transform="translate(32, 22)">
+    <g transform="translate(32, 20)">
       <rect width="160" height="24" rx="12" fill="#00f2fe" fill-opacity="0.1" stroke="#00f2fe" stroke-opacity="0.5" stroke-width="1"/>
       <circle cx="14" cy="12" r="3.5" fill="#00f2fe" filter="url(#glow-subtle)">
         <animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite"/>
         <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite"/>
       </circle>
-      <text x="26" y="16" class="hdr-tag" fill="#00f2fe">👋 HELLO WORLD</text>
+      <text x="26" y="17" class="f-cond-tag" fill="#00f2fe">👋 HELLO WORLD</text>
     </g>
 
-    <!-- TITLE: ARPIT RANA -->
-    <g transform="translate(32, 86)">
-      <text x="0" y="0" class="hdr-title" fill="url(#neon-name)" filter="url(#glow-heavy)" opacity="0.6">ARPIT RANA</text>
-      <text x="0" y="0" class="hdr-title" fill="url(#neon-name)">ARPIT RANA</text>
+    <!-- TITLE: ARPIT RANA (Elongated Condensed) -->
+    <g transform="translate(32, 88)">
+      <text x="0" y="0" class="f-cond-hero" fill="url(#neon-name)" filter="url(#glow-heavy)" opacity="0.6">ARPIT RANA</text>
+      <text x="0" y="0" class="f-cond-hero" fill="url(#neon-name)">ARPIT RANA</text>
     </g>
 
     <!-- Terminal Subtitle / Role Box -->
-    <g transform="translate(32, 118)">
+    <g transform="translate(32, 120)">
       <rect x="0" y="-16" width="460" height="32" rx="8" fill="#070e22" fill-opacity="0.85" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1"/>
-      <text x="12" y="5" class="hdr-role" fill="#00f2fe">❯</text>
+      <text x="12" y="5" class="f-cond-sub" fill="#00f2fe">❯</text>
       
       <!-- Role Cycle -->
       <g>
-        <text x="32" y="4" class="hdr-role" fill="#f1f5f9">
+        <text x="32" y="5" class="f-cond-sub" fill="#f1f5f9">
           AI &amp; Cybersecurity Enthusiast
           <animate attributeName="opacity" values="1;1;0;0;0;0;1" keyTimes="0;0.30;0.33;0.66;0.70;0.97;1" dur="9s" repeatCount="indefinite"/>
         </text>
-        <text x="32" y="4" class="hdr-role" fill="#38bdf8" opacity="0">
+        <text x="32" y="5" class="f-cond-sub" fill="#38bdf8" opacity="0">
           B.Tech CSE Core Undergrad @ LPU
           <animate attributeName="opacity" values="0;0;1;1;0;0;0" keyTimes="0;0.30;0.34;0.63;0.67;0.97;1" dur="9s" repeatCount="indefinite"/>
         </text>
-        <text x="32" y="4" class="hdr-role" fill="#ec4899" opacity="0">
+        <text x="32" y="5" class="f-cond-sub" fill="#ec4899" opacity="0">
           Builder • Explorer • Problem Solver
           <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;0.63;0.67;0.70;0.94;0.98;1" dur="9s" repeatCount="indefinite"/>
         </text>
@@ -156,30 +159,30 @@
       </rect>
     </g>
 
-    <!-- Mini Spec Chips -->
+    <!-- Mini Spec Chips (Elongated Condensed) -->
     <g transform="translate(32, 168)">
-      <rect x="0" y="0" width="95" height="22" rx="6" fill="#00f2fe" fill-opacity="0.1" stroke="#00f2fe" stroke-opacity="0.35"/>
-      <text x="47" y="15" class="hdr-chip" fill="#7dd3fc" text-anchor="middle">⚡ AI / ML</text>
+      <rect x="0" y="0" width="100" height="24" rx="6" fill="#00f2fe" fill-opacity="0.1" stroke="#00f2fe" stroke-opacity="0.35"/>
+      <text x="50" y="16" class="f-cond-chip" fill="#7dd3fc" text-anchor="middle">⚡ AI / ML</text>
 
-      <rect x="105" y="0" width="105" height="22" rx="6" fill="#9d4edd" fill-opacity="0.1" stroke="#9d4edd" stroke-opacity="0.35"/>
-      <text x="157" y="15" class="hdr-chip" fill="#c4b5fd" text-anchor="middle">🔒 CYBERSEC</text>
+      <rect x="110" y="0" width="110" height="24" rx="6" fill="#9d4edd" fill-opacity="0.1" stroke="#9d4edd" stroke-opacity="0.35"/>
+      <text x="165" y="16" class="f-cond-chip" fill="#c4b5fd" text-anchor="middle">🔒 CYBERSEC</text>
 
-      <rect x="220" y="0" width="110" height="22" rx="6" fill="#f72585" fill-opacity="0.1" stroke="#f72585" stroke-opacity="0.35"/>
-      <text x="275" y="15" class="hdr-chip" fill="#f472b6" text-anchor="middle">🚀 FULLSTACK</text>
+      <rect x="230" y="0" width="115" height="24" rx="6" fill="#f72585" fill-opacity="0.1" stroke="#f72585" stroke-opacity="0.35"/>
+      <text x="287" y="16" class="f-cond-chip" fill="#f472b6" text-anchor="middle">🚀 FULLSTACK</text>
 
-      <rect x="340" y="0" width="95" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.15"/>
-      <text x="387" y="15" class="hdr-chip" fill="#94a3b8" text-anchor="middle">🎓 LPU CSE</text>
+      <rect x="355" y="0" width="100" height="24" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.15"/>
+      <text x="405" y="16" class="f-cond-chip" fill="#94a3b8" text-anchor="middle">🎓 LPU CSE</text>
     </g>
 
     <!-- ================= RIGHT PANEL ================= -->
     <!-- Collab Status Pill -->
-    <g transform="translate(560, 22)">
-      <rect width="255" height="30" rx="10" fill="#070e22" fill-opacity="0.9" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.2"/>
+    <g transform="translate(555, 20)">
+      <rect width="260" height="30" rx="10" fill="#070e22" fill-opacity="0.9" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.2"/>
       <circle cx="18" cy="15" r="4" fill="#10b981" filter="url(#glow-subtle)">
         <animate attributeName="r" values="3.5;5.5;3.5" dur="1.6s" repeatCount="indefinite"/>
         <animate attributeName="opacity" values="0.5;1;0.5" dur="1.6s" repeatCount="indefinite"/>
       </circle>
-      <text x="32" y="19" class="hdr-tag" fill="#34d399">OPEN FOR COLLABORATION</text>
+      <text x="32" y="20" class="f-cond-tag" fill="#34d399">OPEN FOR COLLABORATION</text>
     </g>
 
     <!-- Radar Sphere -->
@@ -198,8 +201,8 @@
     </g>
 
     <!-- Audio Equalizer Spectrum -->
-    <g transform="translate(560, 150)">
-      <text x="0" y="-10" class="hdr-tag" font-size="9.5" fill="#64748b">ACTIVITY SPECTRUM</text>
+    <g transform="translate(555, 150)">
+      <text x="0" y="-10" class="f-cond-tag" font-size="11" fill="#64748b">ACTIVITY SPECTRUM</text>
       
       <!-- 10 Bars -->
       <rect x="0" y="0" width="5" height="20" rx="2.5" fill="#00f2fe">
